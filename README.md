@@ -14,32 +14,40 @@
 >这里使用了不同层级目录下的pytho文件。(project)/example.py和(project)/b/example.py做演示
 
 ## 配置:
-####sublimerepl配置
 >		打开sublimerepl配置目录(sublime-text-3/Packages/SublimeREPL/config/Python/)，编辑Main.sublime-menu。修改其中id为：repl_python_run下的cmd，将内容修改为：cmd: [${packages}/SublimeREPL/config/Python/pyvenv.sh", "$project_path", "$project_name", "$file_basename"]
 **参数说明：**
 `pyvenv.sh`脚本:	自己创建的脚本，并符执行权，脚本内容见下文
+<br>
 `project_path`变量:	项目路径
+<br>
 `project_name`变量:	项目名称
+<br>
 `file_basename`变量:	需要被执行的程序文件
 
->		**注意:**默认情况下，sublimeREPL不会传递project_path，project_name变量。需配置"use_build_system_hack": true
+>		注意:默认情况下，sublimeREPL不会传递project_path，project_name变量。需配置"use_build_system_hack": true
 
 **Main.sublime-menu:**
+<br>
 ![Main.sublime-menu](Main.sublime-menu.png)
+<br>
 **用户sublimeREPL配置:**
 <br>
 ![sublimerepl-usersetting.png](sublimerepl-usersetting.png)
+<br>
 **pyvenv.sh脚本:**
 <br>
 ![pyvenv.sh](pyvenv.png)
+<br>
 **激活前的项目配置文件:**
 <br>
 ![deactivate](deactivate.png)
+<br>
 **激活后的项目配置文件:**
+<br>
 ![activate](activate.png)
 
-##思路:
+## 思路:
 就是将项目配置文件路径传递到sublimeREPL，利用bash脚本的jq解析出virtualenv的值
 
-##写在最后
-由于对sublime text3和python不剩了解。有任何问题可以交流。谢谢
+## 写在最后
+由于对sublime text3和python不剩了解。有任何问题欢迎指点。谢谢
