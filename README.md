@@ -17,15 +17,17 @@
 >		1:打开sublimerepl配置目录(sublime-text-3/Packages/SublimeREPL/config/Python/)
 >		2:编辑Main.sublime-menu。修改其中id为：repl_python_run下的cmd，将内容修改为：cmd: [${packages}/SublimeREPL/config/Python/pyvenv.sh", "$project_path", "$project_name", "$file_basename"]
 >		3:创建pyvenv.sh shell脚本
->		$:修改sublimerepl配置,打开“use_build_system_hack": true
+>		4:修改sublimerepl配置,打开“use_build_system_hack": true
+>		5:修改快捷键
 **参数说明：**
+<br>
 `pyvenv.sh`脚本:	自己创建的脚本，并符执行权，脚本内容见下文
 <br>
 `project_path`变量:	项目路径
 <br>
 `project_name`变量:	项目名称
 <br>
-`file_basename`变量:	需要被执行的程序文件
+`file_basename`变量:	需要被调试的程序文件
 
 >		注意:默认情况下，sublimeREPL不会传递project_path，project_name变量。需配置"use_build_system_hack": true
 
