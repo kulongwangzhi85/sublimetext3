@@ -14,9 +14,10 @@
 >这里使用了不同层级目录下的pytho文件。(project)/example.py和(project)/b/example.py做演示
 
 ## 配置:
->		打开sublimerepl配置目录(sublime-text-3/Packages/SublimeREPL/config/Python/)
-<br>
->		编辑Main.sublime-menu。修改其中id为：repl_python_run下的cmd，将内容修改为：cmd: [${packages}/SublimeREPL/config/Python/pyvenv.sh", "$project_path", "$project_name", "$file_basename"]
+>		1:打开sublimerepl配置目录(sublime-text-3/Packages/SublimeREPL/config/Python/)
+>		2:编辑Main.sublime-menu。修改其中id为：repl_python_run下的cmd，将内容修改为：cmd: [${packages}/SublimeREPL/config/Python/pyvenv.sh", "$project_path", "$project_name", "$file_basename"]
+>		3:创建pyvenv.sh shell脚本
+>		$:修改sublimerepl配置,打开“use_build_system_hack": true
 **参数说明：**
 `pyvenv.sh`脚本:	自己创建的脚本，并符执行权，脚本内容见下文
 <br>
