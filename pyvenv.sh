@@ -1,12 +1,13 @@
 #!/bin/bash
 
 projectpath=$1
-
 projectname=$2
-[ -d $projectpath ] || exec python -i -u $3
 
-projectfile=$(ls $projectpath/$projectname)
+projectfile=$projectpath/$projectname
+
 [ -f $projectfile ] || exec python -i -u $3
+
+[ -d $projectpath ] || exec python -i -u $3
 
 venv=$(jq ".virtualenv" $projectfile)
 
