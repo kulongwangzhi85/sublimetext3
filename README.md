@@ -38,6 +38,7 @@
 ![sublimerepl-usersetting.png](sublimerepl-usersetting.png)
 <br>
 **pyvenv.sh脚本:**
+>		**注意:**脚本中原先使用python -i选项，这个选项加入，会导致sublimerepl发送kill sigint信号时，产生僵尸进程。
 <br>
 ![pyvenv.sh](pyvenv.png)
 <br>
