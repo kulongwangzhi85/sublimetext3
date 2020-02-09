@@ -1,18 +1,13 @@
 #!/bin/bash
 
-projectpath=$1
-projectname=$2
+project=$1
 
-projectfile=$projectpath/$projectname
+[ -f ${project} ] || exec python -i -u $3
 
-[ -f $projectfile ] || exec python -i -u $3
+venv=$(jq ".virtualenv" ${project})
 
-[ -d $projectpath ] || exec python -i -u $3
-
-venv=$(jq ".virtualenv" $projectfile)
-
-if [ "$venv" != 'null' ]; then
-    venv=$(echo $venv | sed 's/"//g')
+if [ "${venv}" != 'null' ]; then
+    venv=$(echo ${venv} | sed 's/"//g')
 
     source "${venv}/bin/activate"
 
