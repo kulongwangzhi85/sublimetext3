@@ -2,7 +2,7 @@
 
 project=$1
 
-[ -f ${project} ] || exec python -i -u $3
+[ -f ${project} ] || exec python -i -u $2
 
 venv=$(jq ".virtualenv" ${project})
 
@@ -11,7 +11,7 @@ if [ "${venv}" != 'null' ]; then
 
     source "${venv}/bin/activate"
 
-    exec python -i -u $3
+    exec python -i -u $2
 fi
-exec python -i -u $3
+exec python -i -u $2
 

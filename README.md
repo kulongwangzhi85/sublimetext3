@@ -15,8 +15,7 @@
 
 ## 配置:
 >		1:打开sublimerepl配置目录(sublime-text-3/Packages/SublimeREPL/config/Python/)
->		2:编辑Main.sublime-menu。修改其中id为：repl_python_run下的cmd，将内容修改为："cmd": ["${packages}/SublimeREPL/config/Python/pyvenv.sh", "${project}", "${file_basename}"],
-
+>		2:编辑Main.sublime-menu。修改其中id为：repl_python_run下的cmd，将内容修改为："cmd": ["${packages}/SublimeREPL/config/Python/pyvenv.sh", "${project}", "${file_basename}"]
 >		3:创建pyvenv.sh shell脚本
 >		4:修改sublimerepl配置,打开“use_build_system_hack": true
 >		5:修改快捷键
