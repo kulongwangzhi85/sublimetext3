@@ -23,13 +23,11 @@
 <br>
 `pyvenv.sh`脚本:	自己创建的脚本，并符执行权，脚本内容见下文
 <br>
-`project_path`变量:	项目路径
-<br>
-`project_name`变量:	项目名称
+`project`变量:		项目路径
 <br>
 `file_basename`变量:	需要被调试的程序文件
 
->		注意:默认情况下，sublimeREPL不会传递project_path，project_name变量。需配置"use_build_system_hack": true
+>		注意:默认情况下，sublimeREPL不会传递project变量。需配置"use_build_system_hack": true
 
 **Main.sublime-menu:**
 <br>
